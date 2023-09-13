@@ -1,0 +1,29 @@
+{
+  "name": "Tyre",
+  "plural": "tyres",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand",
+      "foreignKey": "brand_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Car",
+  "plural": "cars",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "brand_id": {
+      "type": "string",
+      "required": true
+    },
+    "tyre_size": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand",
+      "foreignKey": "brand_id"
+    },
+    "tyre": {
+      "type": "belongsTo",
+      "model": "Tyre",
+      "foreignKey": "tyre_size"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
